@@ -1,14 +1,14 @@
-import Image from "next/image";
 import HeroSection from "../Components/Hero";
-// import AboutSection from "../Components/About";
-// import SkillsSection from "../Components/Skills";
-// import ProjectsSection from "../Components/Projects";
-// import ContactSection from "../Components/Contact";
+import TechSkillsCarousel from "@/Components/TechSkillsCarousel";
+import InteractiveProjectShowcase from "@/Components/InteractiveProjectShowcase";
+import { projectData } from "@/data/projects";
 
 export default function Home() {
   return (
     <>
       <HeroSection />
+      <TechSkillsCarousel />
+      <InteractiveProjectShowcase projects={projectData} />
       {/* <AboutSection />
       <SkillsSection />
       <ProjectsSection />
