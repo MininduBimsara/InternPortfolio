@@ -1,0 +1,17 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="awsGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF9900"/>
+      <stop offset="100%" stop-color="#FF6600"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="120" height="120" rx="10" fill="url(#awsGradient)"/>
+  
+  <path d="M75 45 L85 35 L95 45 L85 55 Z" fill="white"/>
+  <path d="M45 45 L55 35 L65 45 L55 55 Z" fill="white"/>
+  <path d="M60 65 L70 55 L80 65 L70 75 Z" fill="white"/>
+  <path d="M30 65 L40 55 L50 65 L40 75 Z" fill="white"/>
+  
+  <text x="60" y="95" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">AWS</text>
+</svg>

@@ -20,10 +20,19 @@ const techSkills: string[] = [
   "AWS",
   "Azure",
   "Figma",
+  "PHP",
+  "HTML5",
+  "CSS3",
+  "Redux",
+  "Nextjs",
+  "Framer",
+  "RabbitMQ",
+  "PayPal",
+  "Nestjs",
 ];
 
 const TechSkillsCarousel = () => {
-  const extendedSkills = [...techSkills, ...techSkills]; // duplicate for loop
+  const extendedSkills = [...techSkills, ...techSkills];
 
   return (
     <section className="py-24 px-6 border-t border-b border-white/10 bg-black">
@@ -39,7 +48,8 @@ const TechSkillsCarousel = () => {
               "linear-gradient(to right, transparent, white 10%, white 90%, transparent)",
           }}
         >
-          <div className="flex min-w-full animate-[scroll_45s_linear_infinite]">
+          {/* Slower scroll - 90s duration */}
+          <div className="flex w-max animate-[scroll_90s_linear_infinite]">
             {extendedSkills.map((skillName, index) => (
               <div
                 key={index}
@@ -47,7 +57,7 @@ const TechSkillsCarousel = () => {
               >
                 <TechIcon
                   name={skillName}
-                  className="w-12 h-12 text-white/60 transition-colors duration-300 group-hover:text-white"
+                  className="w-12 h-12 transition-transform duration-300 group-hover:scale-110"
                 />
                 <span className="mt-3 text-sm text-white/60 transition-colors duration-300 group-hover:text-white">
                   {skillName}

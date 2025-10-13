@@ -59,7 +59,7 @@ const InteractiveProjectShowcase = ({
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Side: Project Image */}
-          <div className="relative w-full aspect-[4/3] animate-fade-in">
+          <div className="relative w-full aspect-[16/9] animate-fade-in">
             <Image
               key={currentProject.id}
               src={currentProject.image}

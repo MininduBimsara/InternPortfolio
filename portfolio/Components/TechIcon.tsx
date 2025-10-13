@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image"; // Import the Next.js Image component
+import Image from "next/image";
 import * as simpleIcons from "simple-icons";
 import { type SimpleIcon } from "simple-icons";
 
@@ -18,6 +18,15 @@ const iconMap: Record<string, keyof typeof simpleIcons> = {
   AWS: "siAmazonwebservices",
   Azure: "siMicrosoftazure",
   Figma: "siFigma",
+  PHP: "siPhp",
+  HTML5: "siHtml5",
+  CSS3: "siCss3",
+  Redux: "siRedux",
+  Nextjs: "siNextdotjs",
+  Framer: "siFramer",
+  RabbitMQ: "siRabbitmq",
+  PayPal: "siPaypal",
+  Nestjs: "siNestjs",
 };
 
 interface TechIconProps {
@@ -26,16 +35,15 @@ interface TechIconProps {
 }
 
 const TechIcon = ({ name, className = "" }: TechIconProps) => {
-  // Custom Java SVG using Next.js Image component
   if (name === "Java") {
     return (
       <Image
-        src="./icons/java.svg"
+        src="/icons/java.svg" // Make sure it's under /public/icons/java.svg
         alt="Java"
-        width={48}  // Required for local images
-        height={48} // Required for local images
+        width={48}
+        height={48}
         className={className}
-        style={{ filter: "invert(70%) brightness(200%)" }} // Style is passed directly
+        style={{ filter: "invert(70%) brightness(200%)" }}
       />
     );
   }
@@ -43,7 +51,7 @@ const TechIcon = ({ name, className = "" }: TechIconProps) => {
   const iconKey = iconMap[name];
   const icon: SimpleIcon | undefined = iconKey
     ? simpleIcons[iconKey]
-       : undefined;
+    : undefined;
 
   if (!icon) return null;
 
@@ -51,9 +59,9 @@ const TechIcon = ({ name, className = "" }: TechIconProps) => {
     <svg
       role="img"
       viewBox="0 0 24 24"
-      xmlns="http://www.w.3.org/2000/svg"
+      xmlns="http://www.w3.org/2000/svg"
       className={className}
-      fill="currentColor"
+      fill={icon.hex || "currentColor"} // Use brand color or fallback
     >
       <title>{icon.title}</title>
       <path d={icon.path} />
